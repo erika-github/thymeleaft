@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaft.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 th:text="${titulo}"></h1>
+	<ul>
+
+		<li th:text="${usuario.userName}"></li>
+		<li th:text="${usuario.userLastName}"></li>
+		<li th:text="${usuario.userTipoDoc}"></li>
+		<li th:text="${usuario.userNumDoc}"></li>
+
+	</ul>
+</body>
+</html>

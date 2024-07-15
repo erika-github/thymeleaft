@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaft.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/user/form}" method="post">
+		<div>
+
+			<label for="userName">Nombre:</label>
+
+			<div>
+
+				<input type="text" name="userName" id="userName"></input>
+
+			</div>
+			<div th:if="${error != null && error.containsKey('userName')}" th:text="${error.userName}" ></div>
+
+		</div>
+
+		<div>
+
+			<label for="userLastName">Apellido:</label>
+
+			<div>
+
+				<input type="text" name="userLastName" id="userLastName"></input>
+
+			</div>
+			
+			<div th:if="${error != null && error.containsKey('userLastName')}" th:text="${error.userLastName}" ></div>
+
+		</div>
+
+
+		<div>
+
+			<label for="userTipoDoc">Tipo Doc:</label>
+
+			<div>
+
+				<input type="text" name="userTipoDoc" id="userTipoDoc" th:value="${usuario.userTipoDoc}">
+																			
+
+			</div>
+			
+			<div th:if="${error != null && error.containsKey('userTipoDoc')}" th:text="${error.userTipoDoc}" ></div>
+
+		</div>
+
+		<div>
+
+			<label for="userNumDoc">Número Doc:</label>
+
+			<div>
+
+				<input type="text" name="userNumDoc" id="userNumDoc" ></input>
+
+			</div>
+			
+			<div th:if="${error != null && error.containsKey('userNumDoc')}" th:text="${error.userNumDoc}" ></div>
+
+		</div>
+
+		<div>
+
+			<input type="submit"  value="Enviar"></input>
+
+		</div>
+
+	</form>
+
+</body>
+</html>

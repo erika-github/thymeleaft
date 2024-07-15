@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaft.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+<!-- <script src="ruta_del_archivo_js"></script>-->
+
+</head>
+<body>
+
+	<h1 th:text="${titulo}"></h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Tipo Doc</th>
+				<th>Cédula</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<tr th:each="item: ${listado}">
+				<td th:text="${item.userName}"></td>
+				<td th:text="${item.userLastName}"></td>
+				<td th:text="${item.userTipoDoc}"></td>
+				<td th:text="${item.userNumDoc}"></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+</body>
+</html>
